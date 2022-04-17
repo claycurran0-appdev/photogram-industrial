@@ -12,5 +12,7 @@ class User < ApplicationRecord
   has_many :leader_requests, class_name: "FollowRequest", foreign_key: "sender_id"
 
   has_many :likes, foreign_key: "fan_id"
+
+  has_many :liked_photos, through: :likes
   
 end
