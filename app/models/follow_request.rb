@@ -15,5 +15,4 @@ class FollowRequest < ApplicationRecord
 
   enum status: { pending: "pending", rejected: "rejected", accepted: "accepted" }
 
-  #some text
 end
