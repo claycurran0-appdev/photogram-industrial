@@ -1,4 +1,4 @@
 class Like < ApplicationRecord
-  belongs_to :fan
-  belongs_to :photo
+  belongs_to :fan, counter_cache: true
+  belongs_to :photo, counter_cache: true
 end
