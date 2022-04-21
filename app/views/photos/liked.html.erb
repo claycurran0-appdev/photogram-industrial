@@ -14,8 +14,9 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Feed</a>
+        <%= link_to 'Feed', feed_photos_path(@user.username), class: "nav-link" %>
       </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="#">Followers</a>
       </li>

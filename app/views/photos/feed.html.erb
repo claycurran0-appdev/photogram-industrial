@@ -30,6 +30,6 @@
   </div>
 </div>
 
-  <% current_user.leaders.photos.each do |photo| %>
+  <% current_user.feed.each do |photo| %>
     <%= render "photos/photo", photo: photo %>
   <% end %>
