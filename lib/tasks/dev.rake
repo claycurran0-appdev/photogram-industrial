@@ -12,6 +12,8 @@ task sample_data: :environment do
 
   usernames << "alice"
   usernames << "bob"
+  usernames << "peter"
+  usernames << "cassandra"
 
   usernames.each do |username|
     u = User.create(
