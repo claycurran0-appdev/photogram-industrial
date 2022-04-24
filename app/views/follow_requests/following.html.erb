@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <h1>
+      <%= @user.username %>
+    </h1>
+    <ul class="nav nav-pills nav-justified">
+      
+      <li class="nav-item">
+        <%= link_to 'Posts', user_path(@user.username), class: "nav-link" %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to 'Liked photos', liked_photos_path(@user.username), class: "nav-link" %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to 'Feed', feed_photos_path(@user.username), class: "nav-link" %>
+      </li>
+      
+      <li class="nav-item">
+        <%= link_to 'Followers', followers_path(@user.username), class: "nav-link" %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to 'Following', following_path(@user.username), class: "nav-link" %>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <ul class="list-group">
+      <% @user.leaders.each do |leader| %>
+        <%= render "follow_requests/relationships", person: leader %>
+      <% end %>
+    </ul>
+  </div>
+</div>
